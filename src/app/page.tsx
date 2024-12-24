@@ -190,8 +190,8 @@ export default function Home() {
             src="/static/project-previews/portfolio-preview.png" 
             title="Benjamin Garcia" 
             description="Third iteration of my portfolio website, built strictly with Next.JS & TailwindCSS. With a strong focus on performance and accessibility, this website is designed to be as lightweight as possible while still providing a visually appealing experience."
-            link = ""
-            tags = {["Next.JS", "TailwindCSS"]}
+            link = "https://github.com/bgar324/BenjaminGarcia-v3"
+            tags = {["Next.JS", "TypeScript", "TailwindCSS", "Vercel"]}
           />
 
           <ProjectItem 
