@@ -6,8 +6,8 @@ type ProjectItemProps = {
   src: string;
   title: string;
   description: string;
-  link?: string; // Optional link for the project
-  tags?: string[]; // Optional tags for technologies or features
+  link?: string; 
+  tags?: string[]; 
 };
 
 export default function ProjectItem({
@@ -41,14 +41,14 @@ export default function ProjectItem({
 
         {/* Title and Description */}
         <div className="md:w-3/4 mt-4 md:mt-0 md:ml-6">
-          <div className="text-xl text-white flex items-center group-hover:text-custom-hover transition duration-300">
+          <div className="text-base sm:text-lg md:text-xl text-white flex items-center group-hover:text-custom-hover transition duration-300">
             {title}
             <FontAwesomeIcon
               icon={faSquareArrowUpRight}
               className="w-4 h-4 ml-2"
             />
           </div>
-          <p className="text-gray-400 text-lg mt-2 leading-relaxed">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg mt-2 leading-relaxed">
             {description}
           </p>
 
@@ -58,7 +58,7 @@ export default function ProjectItem({
               {tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 bg-gray-700 text-white rounded-full text-sm group-hover:bg-gray-600 transition duration-300"
+                  className="px-3 py-1 mb-1 bg-gray-700 text-white rounded-full text-sm group-hover:bg-gray-600 transition duration-300"
                 >
                   {tag}
                 </span>

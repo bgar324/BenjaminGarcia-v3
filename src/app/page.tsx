@@ -1,18 +1,20 @@
 // Home.tsx
+"use client"
+
 import ExperienceItem from "./ExperienceItem";
 import ProjectItem from "./ProjectItem";
 import Script from "next/script";
 import ContactForm from "./ContactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faSpotify, faLastfmSquare } from "@fortawesome/free-brands-svg-icons";
-import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
-
-export const metadata = {
-  title: "Benjamin Garcia",
-  description: "Portfolio of Benjamin Garcia, a Computer Science Student and Web Developer.",
-};
+import { faSquareArrowUpRight} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function Home() {
+  const name = "Benjamin Garcia"
+  const words = name.split("");
+
+  
   return (
     <>
       <Script
@@ -20,11 +22,20 @@ export default function Home() {
         strategy="afterInteractive"
       />
 
-      <div className="min-h-screen flex flex-col justify-center p-10 sm:p-20 lg:px-40 font-cabinet max-w-5xl mx-auto">
+      <div id = "top" className="scroll-mt-52 min-h-screen flex flex-col justify-center p-5 sm:p-20 lg:px-40 font-cabinet max-w-5xl mx-auto animate-fadeIn">
         {/* Header Section */}
         <div className="flex flex-col items-center">
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold pb-2">
-            Benjamin Garcia
+          { name.split("").map((char, idx) => (
+            <span
+              key={idx}
+              style={{ animationDelay: `${(idx * 0.05).toFixed(2)}s` }}
+              className="inline-block animate-letterFloat"
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
+          {/* <h1 className = "text-5xl text-custom-hover">bg</h1> */}
           </h1>
 
           <p className="text-lg sm:text-2xl md:text-3xl font-light text-center">
@@ -45,60 +56,73 @@ export default function Home() {
               <FontAwesomeIcon icon={faSpotify} className="text-grey hover:text-custom-hover text-2xl sm:text-3xl duration-300" />
             </a>
 
-            <a href="https://www.last.fm/user/onda4444" target="_blank" rel="noreferrer">
-              <FontAwesomeIcon icon={faLastfmSquare} className="text-grey hover:text-custom-hover text-2xl sm:text-3xl duration-300" />
+            <a href="mailto:bentgarcia05@gmail.com" target="_blank" rel="noreferrer">
+              <FontAwesomeIcon icon={faEnvelope} className="text-grey hover:text-custom-hover text-2xl sm:text-3xl duration-300" />
             </a>
           </div>
 
           {/* Navigation Links */}
-          <div className="sticky top-0 bg-navbar-bg z-50">
-            <ul className="flex space-x-4 underline underline-offset-4 pt-4 pb-3">
-              <li>
-                <a
-                  href="#experience"
-                  className="text-sm sm:text-lg hover:text-custom-hover hover:underline hover:decoration-custom-hover transition duration-300"
-                >
-                  experience
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  className="text-sm sm:text-lg hover:text-custom-hover hover:underline hover:decoration-custom-hover transition duration-300"
-                >
-                  projects
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#skills"
-                  className="text-sm sm:text-lg hover:text-custom-hover hover:underline hover:decoration-custom-hover transition duration-300"
-                >
-                  skills
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-sm sm:text-lg hover:text-custom-hover hover:underline hover:decoration-custom-hover transition duration-300"
-                >
-                  contact
-                </a>
-              </li>
-            </ul>
-          </div>
+          
         </div>
+        <nav className="flex justify-center sticky -top-0.5 z-50 bg-navbar-bg">
+          <ul className="flex flex-wrap space-x-4 underline underline-offset-4 mt-4 pb-3 px-5 sm:px-20 lg:px-40 items-center">
+            <li>
+              <a
+                href="#top"
+                className="text-sm sm:text-lg hover:text-custom-hover hover:underline hover:decoration-custom-hover transition duration-300"
+              >
+                home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#experience"
+                className="text-sm sm:text-lg hover:text-custom-hover hover:underline hover:decoration-custom-hover transition duration-300"
+              >
+                experience
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#projects"
+                className="text-sm sm:text-lg hover:text-custom-hover hover:underline hover:decoration-custom-hover transition duration-300"
+              >
+                projects
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#skills"
+                className="text-sm sm:text-lg hover:text-custom-hover hover:underline hover:decoration-custom-hover transition duration-300"
+              >
+                skills
+              </a>
+            </li>
+            
+            <li>
+              <a
+                href="#contact"
+                className="text-sm sm:text-lg hover:text-custom-hover hover:underline hover:decoration-custom-hover transition duration-300"
+              >
+                contact
+              </a>
+            </li>
+          </ul>
+        </nav>
 
         {/* About Section */}
         <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed text-center">
-          I'm a Computer Science Student and Web Developer based in the greater Los Angeles area.
-          Currently working as an AI Engineer at Outlier AI, with experience in front-end development
+          I'm a <span className = "text-custom-hover">Computer Science Student</span> and <span className = "text-custom-hover">Web Developer</span> based in the greater Los Angeles area.
+          Currently working as an <span className = "text-custom-hover">AI Engineer</span> at <span className = "text-custom-hover">Outlier AI</span>, with experience in <span className = "text-custom-hover">front-end development </span>
           through my college's Computer Science Club and client work.
         </p>
 
-        <img src="/static/ben.JPG" className="w-full h-auto rounded-lg mx-auto mt-6" />
+        <img src="/static/ben-min.JPG" className="w-full h-auto rounded-lg mx-auto mt-6" />
 
-        <div id = "experience" className="flex flex-col">
+        <div id = "experience" className="scroll-mt-24 flex flex-col">
           <ExperienceItem 
           dateRange="SEP 2024 — PRESENT"
           title="Front End Web Developer · Partnered with WHS" 
@@ -134,7 +158,7 @@ export default function Home() {
           <ExperienceItem 
           dateRange="FEB 2024 — MAR 2024" 
           title="AI Powered VC Analyst · igniteXL Ventures" 
-          description="Utilized startup databases such as Crunchbase, Pitchbook, Tracxn, and Wellfound/AngelList to identify promising startups in the Health, Beauty, and Wellness sectors. Conducted in-depth research using generative AI tools like ChatGPT (3.5 & 4), Google PaLM, Perplexity, and Bing AI to gather valuable insights. Developed a comprehensive three-page investment thesis outlining investment rationale, potential risks with mitigation strategies, business models, and key metrics such as growth and consumer profiles."
+          description="Utilized startup databases such as Crunchbase, Pitchbook, Tracxn, and Wellfound/AngelList to identify promising startups in the Health, Beauty, and Wellness sectors. Conducted in-depth research using generative AI tools like ChatGPT (3.5 & 4), Google PaLM, Perplexity, and Bing AI to gather valuable insights.  a comprehensive three-page investment thesis outlining investment rationale, potential risks with mitigation strategies, business models, and key metrics such as growth and consumer profiles."
           link="https://ignitexl.vc/"
           tags={["AI", "VC", "Investment Analysis"]}
           />
@@ -152,16 +176,16 @@ export default function Home() {
           href="/static/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center text-white font-semibold mx-auto mt-5 mb-20 p-3 rounded-lg hover:bg-gray-800 hover:text-custom-hover transition duration-300"
+          className="text-sm sm:text-base md:text-lg flex items-center justify-center text-white font-semibold mx-auto mt-5 mb-20 p-3 rounded-lg shadow-md hover:bg-gray-800 hover:text-custom-hover transition duration-300"
         >
-          View & Download full Résumé
+          View full Résumé
           <FontAwesomeIcon
               icon={faSquareArrowUpRight}
               className="w-4 h-4 ml-2"
             />
         </a>
 
-        <div id = "projects" className="flex flex-col">
+        <div id = "projects" className="scroll-mt-24 flex flex-col">
           <ProjectItem 
             src="/static/project-previews/portfolio-preview.png" 
             title="Benjamin Garcia" 
@@ -198,7 +222,7 @@ export default function Home() {
 
         {/* skills section */}
 
-        <div id="skills" className="text-lg border rounded-lg border-white p-6 mt-4 w-10/12 mx-auto">
+        <div id="skills" className="scroll-mt-52 text-lg border rounded-lg border-white p-6 mt-4 w-10/12 mx-auto">
           <div className="grid grid-cols-4 gap-6">
           {[
             { icon: '/static/skills/next.svg', alt: 'Next.js', link: 'https://nextjs.org/' },
@@ -226,9 +250,7 @@ export default function Home() {
             ))}
           </div>
         </div>  
-
         <ContactForm />
-        
       </div>
     </>
     

@@ -26,14 +26,14 @@ const ContactForm: React.FC = () => {
 
     emailjs
       .send(
-        "service_d43o7al", // Replace with your EmailJS Service ID
-        "template_mybbwas", // Replace with your EmailJS Template ID
+        "service_d43o7al",
+        "template_mybbwas",
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "qMi-Bmqubs5mGqmsm" // Replace with your EmailJS Public Key
+        "qMi-Bmqubs5mGqmsm" 
       )
       .then(
         () => {
@@ -48,11 +48,11 @@ const ContactForm: React.FC = () => {
 
   return (
     <div id="contact" className="mt-12 p-6 w-3/4 mx-auto">
-      <h2 className="text-2xl font-semibold mb-4 text-center">Looking to get in touch?</h2>
+      <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-center">Looking to get in touch?</h2>
       {successMessage && <p className="text-green-500 text-center mb-4">{successMessage}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="name" className="block text-lg font-medium">
+          <label htmlFor="name" className="block text-sm sm:text-base md:text-lg font-medium">
             Your Name
           </label>
           <input
@@ -62,11 +62,11 @@ const ContactForm: React.FC = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="mt-1 p-2 block w-full border rounded-md text-lg text-black"
+            className="mt-1 p-2 block w-full border rounded-md text-sm sm:text-base md:text-lg text-black"
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-lg font-medium">
+          <label htmlFor="email" className="block text-sm sm:text-base md:text-lg font-medium">
             Your Email
           </label>
           <input
@@ -76,11 +76,11 @@ const ContactForm: React.FC = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="mt-1 p-2 block w-full border rounded-md text-lg text-black"
+            className="mt-1 p-2 block w-full border rounded-md text-sm sm:text-base md:text-lg text-black"
           />
         </div>
         <div>
-          <label htmlFor="message" className="block text-lg font-medium">
+          <label htmlFor="message" className="block text-sm sm:text-base md:text-lg font-medium">
             Your Message
           </label>
           <textarea
@@ -90,7 +90,7 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
             rows={5}
-            className="mt-1 p-2 block w-full border rounded-md text-lg text-black"
+            className="mt-1 p-2 block w-full border rounded-md text-sm sm:text-base md:text-lg text-black"
           ></textarea>
         </div>
         <button

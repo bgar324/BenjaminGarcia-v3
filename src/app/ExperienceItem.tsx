@@ -6,8 +6,8 @@ type ExperienceItemProps = {
   dateRange: string;
   title: string;
   description: string;
-  link?: string; // Optional link for the entire container
-  tags?: string[]; // Optional tags for technologies or skills
+  link?: string; 
+  tags?: string[]; 
 };
 
 export default function ExperienceItem({
@@ -31,16 +31,16 @@ export default function ExperienceItem({
     >
       <div className="flex flex-col md:flex-row justify-between w-full my-4 rounded-lg p-4 transition duration-300 ease-in-out bg-transparent hover:bg-gray-800 hover:shadow-lg cursor-pointer">
 
-        <div className="text-gray-400 text-sm md:w-1/4 py-1">{dateRange}</div>
+        <div className="text-gray-400 text-xs sm:text-sm md:w-1/4 py-1">{dateRange}</div>
         <div className="md:w-3/4">
-          <div className="text-xl text-white flex items-center group-hover:text-custom-hover transition duration-300">
+          <div className="text-base sm:text-lg md:text-xl text-white flex items-center group-hover:text-custom-hover transition duration-300">
             {title}
             <FontAwesomeIcon
               icon={faSquareArrowUpRight}
               className="w-4 h-4 ml-2"
             />
           </div>
-          <p className="text-gray-400 text-lg mt-2 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 mt-2 leading-relaxed">
             {description}
           </p>
 
@@ -49,7 +49,7 @@ export default function ExperienceItem({
               {tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 bg-gray-700 text-white rounded-full text-sm group-hover:bg-gray-600 transition duration-300"
+                  className="px-3 py-1 mb-1 bg-gray-700 text-white rounded-full text-xs sm:text-sm group-hover:bg-gray-600 transition duration-300"
                 >
                   {tag}
                 </span>
