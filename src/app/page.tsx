@@ -176,7 +176,11 @@ export default function Home() {
           href="/static/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm sm:text-base md:text-lg flex items-center justify-center text-white font-semibold mx-auto mt-5 mb-20 p-3 rounded-lg shadow-md hover:bg-gray-800 hover:text-custom-hover transition duration-300"
+          className="text-sm sm:text-base md:text-lg flex items-center justify-center text-white font-semibold mx-auto 
+          mt-3 sm:mt-4 md:mt-5 
+          mb-12 sm:mb-16 md:mb-20 
+          p-3 
+          rounded-lg shadow-md hover:bg-gray-800 hover:text-custom-hover transition duration-300"
         >
           View full Résumé
           <FontAwesomeIcon
