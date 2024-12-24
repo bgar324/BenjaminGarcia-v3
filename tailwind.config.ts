@@ -41,7 +41,7 @@ const config: Config = {
         },
       },
       animation: {
-        fadeIn: "fadeIn 1.2s ease-out forwards",
+        fadeIn: "fadeIn 1s ease-out forwards",
         letterFloat:
           "letterFloat 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards",
       },
