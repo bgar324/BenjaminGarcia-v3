@@ -5,8 +5,8 @@
 @import url('../../fonts/CabinetGrotesk_Complete/Fonts/WEB/css/cabinet-grotesk.css');
 
 :root {
-  --background: #ffffff;
-  --foreground: #101110;
+  --background: #101110;
+  --foreground: #ffffff;;
 }
 
 @media (prefers-color-scheme: dark) {
