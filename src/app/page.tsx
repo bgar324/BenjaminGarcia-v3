@@ -222,34 +222,71 @@ export default function Home() {
 
         {/* skills section */}
 
-        <div id="skills" className="scroll-mt-52 text-lg border rounded-lg border-white p-6 mt-4 w-10/12 mx-auto">
-          <div className="grid grid-cols-4 gap-6">
+        <div
+        id="skills"
+        className="scroll-mt-52 text-lg border rounded-lg border-white p-6 mt-4 w-10/12 mx-auto"
+      >
+        <div className="grid grid-cols-4 gap-6">
           {[
-            { icon: '/static/skills/next.svg', alt: 'Next.js', link: 'https://nextjs.org/' },
-            { icon: '/static/skills/react.svg', alt: 'React', link: 'https://reactjs.org/' },
-            { icon: '/static/skills/tailwind.svg', alt: 'TailwindCSS', link: 'https://tailwindcss.com/' },
-            { icon: '/static/skills/javascript.svg', alt: 'JavaScript', link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
-            { icon: '/static/skills/html.svg', alt: 'HTML', link: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
-            { icon: '/static/skills/c++.svg', alt: 'C++', link: 'https://cplusplus.com/' },
-            { icon: '/static/skills/python.svg', alt: 'Python', link: 'https://www.python.org/' },
-            { icon: '/static/skills/asm.svg', alt: 'MASM', link: 'https://learn.microsoft.com/en-us/cpp/assembler/masm/masm-for-x64-ml64-exe?view=msvc-170' },
-            ].map((skill, index) => (
-              <a
-                key={index}
-                href={skill.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col items-center justify-center p-2 rounded-lg transition duration-300"
-              >
-                <img
-                  src={skill.icon}
-                  alt={skill.alt}
-                  className="w-12 h-12 mx-auto transition filter invert group-hover:filter-custom-hover"
-                />
-              </a>
-            ))}
-          </div>
-        </div>  
+            {
+              icon: "/static/skills/next.svg",
+              alt: "Next.js",
+              link: "https://nextjs.org/",
+            },
+            {
+              icon: "/static/skills/react.svg",
+              alt: "React",
+              link: "https://reactjs.org/",
+            },
+            {
+              icon: "/static/skills/tailwind.svg",
+              alt: "TailwindCSS",
+              link: "https://tailwindcss.com/",
+            },
+            {
+              icon: "/static/skills/javascript.svg",
+              alt: "JavaScript",
+              link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+            },
+            {
+              icon: "/static/skills/html.svg",
+              alt: "HTML",
+              link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+            },
+            {
+              icon: "/static/skills/c++.svg",
+              alt: "C++",
+              link: "https://cplusplus.com/",
+            },
+            {
+              icon: "/static/skills/python.svg",
+              alt: "Python",
+              link: "https://www.python.org/",
+            },
+            {
+              icon: "/static/skills/asm.svg",
+              alt: "MASM",
+              link: "https://learn.microsoft.com/en-us/cpp/assembler/masm/masm-for-x64-ml64-exe?view=msvc-170",
+            },
+          ].map((skill, index) => (
+            <a
+              key={index}
+              href={skill.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center justify-center p-2 rounded-lg transition duration-300"
+            >
+              <img
+                src={skill.icon}
+                alt={skill.alt}
+                className="w-12 h-12 mx-auto transition duration-300 filter invert group-hover:filter-custom-hover"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+
+    
         <ContactForm />
       </div>
     </>

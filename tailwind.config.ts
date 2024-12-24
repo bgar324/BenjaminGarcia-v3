@@ -1,6 +1,8 @@
+// tailwind.config.ts
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,11 +17,12 @@ export default {
         "navbar-bg": "#101110",
       },
       fontFamily: {
-        cabinet: ["CabinetGrotesk-Variable", "Arial", "Helvetica", "sans-serif"],
-      },
-      filter: {
-        "custom-hover":
-          "invert(54%) sepia(58%) saturate(342%) hue-rotate(314deg) brightness(90%) contrast(105%)",
+        cabinet: [
+          "CabinetGrotesk-Variable",
+          "Arial",
+          "Helvetica",
+          "sans-serif",
+        ],
       },
       keyframes: {
         fadeIn: {
@@ -39,9 +42,22 @@ export default {
       },
       animation: {
         fadeIn: "fadeIn 1.2s ease-out forwards",
-        letterFloat: "letterFloat .8s cubic-bezier(0.65, 0, 0.35, 1) forwards",
+        letterFloat:
+          "letterFloat 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards",
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        ".filter-custom-hover": {
+          filter:
+            "invert(54%) sepia(58%) saturate(342%) hue-rotate(314deg) brightness(90%) contrast(105%)",
+        },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
+};
+
+export default config;
