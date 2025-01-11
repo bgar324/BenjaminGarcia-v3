@@ -54,7 +54,7 @@ export default function ProjectItem({
 
           {/* Tags */}
           {tags && (
-            <div className="flex flex-wrap space-x-2 mt-4">
+            <div className="flex flex-wrap gap-2 mt-4">
               {tags.map((tag, index) => (
                 <span
                   key={index}

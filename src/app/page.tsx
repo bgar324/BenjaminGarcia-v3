@@ -199,6 +199,14 @@ export default function Home() {
           />
 
           <ProjectItem 
+            src="static/project-previews/Screenshot 2025-01-09 233039-min.png" 
+            title="Tea Spots" 
+            description="Collaborated with video production and graphic design teams to redesign a client’s website using Square Online, integrating custom CSS, embedded code, and POS systems to support high traffic and dozens of weekly orders. Optimized multimedia assets for a cohesive, brand-aligned experience, resulting in thousands of page views and 200+ unique visits in the first week."
+            link = "https://www.myteaspots.com/"
+            tags = {["Square Online", "Square Sites", "Photopea", "Graphic Design", "Video Production"]}
+          />
+
+          <ProjectItem 
             src="/static/project-previews/csclubwebsite-preview.png" 
             title="Mt. SAC Computer Science Club Website" 
             description="Redesigned and developed the Mt. SAC Computer Science Club website using React.JS and Bootstrap to improve functionality, accessibility, and responsiveness. The site serves as a hub for members, providing resources, event details, officer contacts, and Discord access."
