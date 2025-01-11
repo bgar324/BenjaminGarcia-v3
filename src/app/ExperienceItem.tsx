@@ -45,7 +45,7 @@ export default function ExperienceItem({
           </p>
 
           {tags && (
-            <div className="flex flex-wrap space-x-2 mt-4">
+            <div className="flex flex-wrap gap-x-2 mt-4">
               {tags.map((tag, index) => (
                 <span
                   key={index}
