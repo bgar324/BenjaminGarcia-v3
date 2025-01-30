@@ -197,6 +197,14 @@ export default function Home() {
             link = "https://github.com/bgar324/BenjaminGarcia-v3"
             tags = {["Next.JS", "TypeScript", "TailwindCSS", "Vercel"]}
           />
+          
+          <ProjectItem 
+            src="static/project-previews/image.png" 
+            title="Roadmap Maker" 
+            description="Built a CRUD web app using Next.js, Tailwind, and an MUI Timeline for visualizing tasks throughout the year. Users pick a month, define date ranges, and enter a title with an optional description, automatically placing tasks on the timeline. Integrated pdfmake enables generating a downloadable PDF of the entire roadmap."
+            link = "https://github.com/bgar324/roadmapMaker"
+            tags = {["Next.JS", "TailwindCSS", "MUI", "pdfmake"]}
+          />
 
           <ProjectItem 
             src="static/project-previews/Screenshot 2025-01-09 233039-min.png" 
