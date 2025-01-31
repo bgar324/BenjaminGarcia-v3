@@ -125,7 +125,7 @@ export default function Home() {
         <div id = "experience" className="scroll-mt-24 flex flex-col">
           <ExperienceItem 
           dateRange="SEP 2024 — PRESENT"
-          title="Front End Web Developer · Partnered with WHS" 
+          title="Front-End Developer · Partnered with WHS" 
           description="Communicated with clients to understand website needs and preferences. Collaborated with graphic design and video production teams to receive and integrate media assets, ensuring optimal formatting and display across different resolutions. Leveraged HTML, CSS, JavaScript, and React to deliver a seamless user experience with well-implemented animations."
           link="https://www.walnuths.net/apps/pages/index.jsp?uREC_ID=61709&type=d&pREC_ID=638922"
           tags={["SquareSites", "Next.JS", "TailwindCSS", "React.JS", "Bootstrap"]}
@@ -133,8 +133,8 @@ export default function Home() {
           
           <ExperienceItem 
           dateRange="SEP 2024 — PRESENT" 
-          title="Outreach Officer & Webmaster · Mt. SAC CS Club" 
-          description="Spearheaded the redesign of the 900 member club website using React.js and Bootstrap. Used Vite for frontend build development and Netlify for deployment. Created visually engaging and effective flyers for club events, contributing to successful outreach and engagement initiatives." 
+          title="Front-End Developer · Mt. SAC CS Club" 
+          description="Spearheaded the redesign and overhaul of the Mt. SAC Computer Science Club website for a 900+ member organization, transitioning to React.JS for modularity and Bootstrap for responsiveness and improved functionality. Developed and implemented features to enhance user experience and accessibility, including up-to-date contact information, officer and advisor profiles, upcoming and past events." 
           link="https://mtsaccs.netlify.app/"
           tags={["React.JS", "Bootstrap", "Vite", "Netlify"]}
           />
@@ -285,8 +285,8 @@ export default function Home() {
             },
             {
               icon: "/static/skills/asm.svg",
-              alt: "MASM",
-              link: "https://learn.microsoft.com/en-us/cpp/assembler/masm/masm-for-x64-ml64-exe?view=msvc-170",
+              alt: "Bootstrap",
+              link: "https://getbootstrap.com/",
             },
           ].map((skill, index) => (
             <a
