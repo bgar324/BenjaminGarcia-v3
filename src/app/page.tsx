@@ -154,8 +154,9 @@ export default function Home() {
           and <span className="text-custom-hover">Web Developer</span> based in
           the greater Los Angeles area. Currently working as a{" "}
           <span className="text-custom-hover">Software Developer</span> at{" "}
-          <span className="text-custom-hover">Reality AI Lab</span>, with experience
-          in <span className="text-custom-hover">front-end development </span>
+          <span className="text-custom-hover">Reality AI Lab</span>, with
+          experience in{" "}
+          <span className="text-custom-hover">front-end development </span>
           through my college's Computer Science Club and client work.
         </p>
 
@@ -177,7 +178,7 @@ export default function Home() {
               "Python",
               "RESTful APIs",
               "Firebase",
-              "Open Source Contribution"
+              "Open Source Contribution",
             ]}
           />
 
