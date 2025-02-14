@@ -33,7 +33,7 @@ const ContactForm: React.FC = () => {
           from_email: formData.email,
           message: formData.message,
         },
-        "qMi-Bmqubs5mGqmsm" 
+        "qMi-Bmqubs5mGqmsm"
       )
       .then(
         () => {
@@ -48,11 +48,18 @@ const ContactForm: React.FC = () => {
 
   return (
     <div id="contact" className="mt-12 p-6 w-3/4 mx-auto">
-      <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-center">Looking to get in touch?</h2>
-      {successMessage && <p className="text-green-500 text-center mb-4">{successMessage}</p>}
+      <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-center">
+        Looking to get in touch?
+      </h2>
+      {successMessage && (
+        <p className="text-green-500 text-center mb-4">{successMessage}</p>
+      )}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="name" className="block text-sm sm:text-base md:text-lg font-medium">
+          <label
+            htmlFor="name"
+            className="block text-sm sm:text-base md:text-lg font-medium"
+          >
             Your Name
           </label>
           <input
@@ -66,7 +73,10 @@ const ContactForm: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm sm:text-base md:text-lg font-medium">
+          <label
+            htmlFor="email"
+            className="block text-sm sm:text-base md:text-lg font-medium"
+          >
             Your Email
           </label>
           <input
@@ -80,7 +90,10 @@ const ContactForm: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="message" className="block text-sm sm:text-base md:text-lg font-medium">
+          <label
+            htmlFor="message"
+            className="block text-sm sm:text-base md:text-lg font-medium"
+          >
             Your Message
           </label>
           <textarea

@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('../../fonts/CabinetGrotesk_Complete/Fonts/WEB/css/cabinet-grotesk.css');
+@import url("../../fonts/CabinetGrotesk_Complete/Fonts/WEB/css/cabinet-grotesk.css");
 
 :root {
   --background: #101110;
-  --foreground: #ffffff;;
+  --foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,9 +19,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'CabinetGrotesk-Variable', Arial, Helvetica, sans-serif;
+  font-family: "CabinetGrotesk-Variable", Arial, Helvetica, sans-serif;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }

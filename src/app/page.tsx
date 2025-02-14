@@ -264,6 +264,25 @@ export default function Home() {
           />
 
           <ProjectItem
+            src="/static/project-previews/logit-preview.png"
+            title="logit"
+            note="(work in progress!)"
+            description="A full-stack workout logging app designed for a minimal and efficient tracking experience. Users can log workouts, edit past sessions with a React-calendar, and track progress with Recharts visualizations. Workouts are stored in a PostgreSQL database, with support for tags, comments, and dropsets. Built with Next.js, Tailwind CSS, and Prisma, it streamlines workout management while enabling progressive overload tracking."
+            link="https://github.com/bgar324/logit"
+            tags={[
+              "Next.JS",
+              "React",
+              "TypeScript",
+              "TailwindCSS",
+              "react-calendar",
+              "Recharts",
+              "Supabase",
+              "PostgreSQL",
+              "Prisma",
+            ]}
+          />
+
+          <ProjectItem
             src="static/project-previews/image.png"
             title="Roadmap Maker"
             description="Built a CRUD web app using Next.js, Tailwind, and an MUI Timeline for visualizing tasks throughout the year. Users pick a month, define date ranges, and enter a title with an optional description, automatically placing tasks on the timeline. Integrated pdfmake enables generating a downloadable PDF of the entire roadmap."
@@ -295,7 +314,7 @@ export default function Home() {
 
           <ProjectItem
             src="/static/project-previews/suika-preview.png"
-            title="Python: Suika Remake"
+            title="Suika Remake"
             description="Developed a physics-driven puzzle game featuring realistic ball dynamics using Pymunk, with color-coded merging mechanics and interactive player controls. Integrated gameplay elements like a scoring system, cooldown mechanics, and responsive visuals. Built with Pygame for rendering and Python for game logic and functionality."
             link="https://github.com/bgar324/suika"
             tags={["Python", "Pygame", "Pymunk"]}
