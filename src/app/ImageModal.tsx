@@ -45,23 +45,23 @@ export default function ImageModal({ images, initialIndex = 0, onClose }: ImageM
         closing ? "animate-slideDown" : "animate-slideUp"
       } ease-in-out`}
     >
-      <div className="relative max-w-7xl max-h-full">
+      <div className="relative max-w-7xl max-h-full flex justify-center items-center">
         <img
           src={images[currentIndex]}
           alt="Presented"
-          className="w-full h-auto rounded-lg"
+          className="w-11/12 md:w-full h-auto rounded-lg"
         />
         {images.length > 1 && (
           <>
             <button
               onClick={prevImage}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 text-custom-hover text-xl p-2 ml-2"
-            >
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 text-custom-hover text-base sm:text-lg md:text-xl p-2 ml-4 md:ml-2"
+            > 
               <FontAwesomeIcon icon={faArrowLeft} />
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 text-custom-hover text-xl p-2 mr-2"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 text-custom-hover text-base sm:text-lg md:text-xl p-2 mr-4 md:mr-2"
             >
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
