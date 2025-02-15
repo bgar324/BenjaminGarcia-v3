@@ -1,6 +1,7 @@
 // Home.tsx
 "use client";
 
+import { useState } from "react";
 import ExperienceItem from "./ExperienceItem";
 import ProjectItem from "./ProjectItem";
 import Script from "next/script";
@@ -10,14 +11,24 @@ import {
   faLinkedin,
   faGithub,
   faSpotify,
-  faLastfmSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import ImageModal from "./ImageModal";
 
 export default function Home() {
   const name = "Benjamin Garcia";
   const words = name.split("");
+
+  const [modalImages, setModalImages] = useState<string[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [initialIndex, setInitialIndex] = useState(0);
+
+  const handleImageClick = (images: string[], index: number = 0) => {
+    setModalImages(images);
+    setInitialIndex(index);
+    setIsModalOpen(true);
+  };
 
   return (
     <>
@@ -30,7 +41,6 @@ export default function Home() {
         id="top"
         className="scroll-mt-52 min-h-screen flex flex-col justify-center p-5 sm:p-20 lg:px-40 font-cabinet max-w-5xl mx-auto animate-fadeIn"
       >
-        {/* Header Section */}
         <div className="flex flex-col items-center">
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold pb-2">
             {name.split("").map((char, idx) => (
@@ -49,7 +59,6 @@ export default function Home() {
             Turning code into meaningful creations.
           </p>
 
-          {/* Social Links */}
           <div className="flex space-x-4 mt-4 justify-between gap-5">
             <a
               href="https://www.linkedin.com/in/btgarcia05/"
@@ -280,6 +289,14 @@ export default function Home() {
               "PostgreSQL",
               "Prisma",
             ]}
+            galleryImages={[
+              "/static/project-previews/logit-preview.png",
+              "/static/project-previews/logit-preview-2.png",
+              "/static/project-previews/logit-preview-3.png",
+              "/static/project-previews/logit-preview-4.png",
+              "/static/project-previews/logit-preview-5.png",
+            ]}
+            onImageClick={handleImageClick}
           />
 
           <ProjectItem
@@ -397,6 +414,13 @@ export default function Home() {
 
         <ContactForm />
       </div>
+      {isModalOpen && (
+        <ImageModal
+          images={modalImages}
+          initialIndex={initialIndex}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </>
   );
 }

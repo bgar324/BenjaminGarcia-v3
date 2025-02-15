@@ -9,6 +9,11 @@ type ProjectItemProps = {
   description: string;
   link?: string;
   tags?: string[];
+
+  //testing
+
+  galleryImages?: string[];
+  onImageClick?: (images: string[], initialIndex: number) => void;
 };
 
 export default function ProjectItem({
@@ -18,7 +23,18 @@ export default function ProjectItem({
   description,
   link,
   tags,
+  galleryImages,
+  onImageClick,
 }: ProjectItemProps) {
+  const handleImageClick = () => {
+    if (onImageClick) {
+      onImageClick(
+        galleryImages && galleryImages.length > 0 ? galleryImages : [src],
+        0
+      );
+    }
+  };
+
   return (
     <>
       <Script
@@ -37,6 +53,10 @@ export default function ProjectItem({
               src={src}
               alt={title}
               className="w-50 h-auto rounded-lg border border-gray-900"
+              onClick={(e) => {
+                e.preventDefault();
+                handleImageClick();
+              }}
             />
           </div>
           <div className="md:w-3/4 mt-4 md:mt-0 md:ml-6">

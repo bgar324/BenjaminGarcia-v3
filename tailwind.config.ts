@@ -39,11 +39,20 @@ const config: Config = {
             color: "theme('colors.custom-hover')",
           },
         },
+        slideIn: {
+          "0%": { opacity: "0", transform: "translateY(50px)" }, 
+          "100%": { opacity: "1", transform: "translateY(0)" }, 
+        },
+        slideDown: {
+          "0%": { opacity: "1", transform: "translateY(0)" },
+          "100%": { opacity: "0", transform: "translateY(50px)" },
+        },
       },
       animation: {
         fadeIn: "fadeIn 1s ease-out forwards",
         letterFloat:
           "letterFloat 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards",
+        slideUp: "fadeIn .5s ease-in-out forwards",
       },
     },
   },
