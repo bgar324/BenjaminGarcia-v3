@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faArrowLeft, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faArrowLeft,
+  faCircleXmark,
+} from "@fortawesome/free-solid-svg-icons";
 
 type ImageModalProps = {
   images: string[];
@@ -8,7 +12,11 @@ type ImageModalProps = {
   onClose: () => void;
 };
 
-export default function ImageModal({ images, initialIndex = 0, onClose }: ImageModalProps) {
+export default function ImageModal({
+  images,
+  initialIndex = 0,
+  onClose,
+}: ImageModalProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [closing, setClosing] = useState(false);
 
@@ -33,7 +41,7 @@ export default function ImageModal({ images, initialIndex = 0, onClose }: ImageM
   const handleClose = () => {
     setClosing(true);
     setTimeout(() => {
-      onClose(); 
+      onClose();
     }, 300);
   };
 
@@ -42,7 +50,7 @@ export default function ImageModal({ images, initialIndex = 0, onClose }: ImageM
       id="modal-background"
       onClick={handleBackgroundClick}
       className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50 ${
-        closing ? "animate-slideDown" : "animate-slideUp"
+        closing ? "animate-slideBlob" : "animate-slideUp"
       } ease-in-out`}
     >
       <div className="relative max-w-7xl max-h-full flex justify-center items-center">
@@ -56,7 +64,7 @@ export default function ImageModal({ images, initialIndex = 0, onClose }: ImageM
             <button
               onClick={prevImage}
               className="absolute left-0 top-1/2 transform -translate-y-1/2 text-custom-hover text-base sm:text-lg md:text-xl p-2 ml-4 md:ml-2"
-            > 
+            >
               <FontAwesomeIcon icon={faArrowLeft} />
             </button>
             <button

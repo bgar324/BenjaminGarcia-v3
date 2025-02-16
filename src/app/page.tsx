@@ -270,6 +270,7 @@ export default function Home() {
             description="Third iteration of my portfolio website, built strictly with Next.JS & TailwindCSS. With a strong focus on performance and accessibility, this website is designed to be as lightweight as possible while still providing a visually appealing experience."
             link="https://github.com/bgar324/BenjaminGarcia-v3"
             tags={["Next.JS", "TypeScript", "TailwindCSS", "Vercel"]}
+            onImageClick={handleImageClick}
           />
 
           <ProjectItem
@@ -305,6 +306,7 @@ export default function Home() {
             description="Built a CRUD web app using Next.js, Tailwind, and an MUI Timeline for visualizing tasks throughout the year. Users pick a month, define date ranges, and enter a title with an optional description, automatically placing tasks on the timeline. Integrated pdfmake enables generating a downloadable PDF of the entire roadmap."
             link="https://github.com/bgar324/roadmapMaker"
             tags={["Next.JS", "TailwindCSS", "MUI", "pdfmake"]}
+            onImageClick={handleImageClick}
           />
 
           <ProjectItem
@@ -319,6 +321,7 @@ export default function Home() {
               "Graphic Design",
               "Video Production",
             ]}
+            onImageClick={handleImageClick}
           />
 
           <ProjectItem
@@ -327,6 +330,7 @@ export default function Home() {
             description="Redesigned and developed the Mt. SAC Computer Science Club website using React.JS and Bootstrap to improve functionality, accessibility, and responsiveness. The site serves as a hub for members, providing resources, event details, officer contacts, and Discord access."
             link="https://mtsaccs.netlify.app/"
             tags={["React.JS", "Bootstrap", "Vite", "Netlify"]}
+            onImageClick={handleImageClick}
           />
 
           <ProjectItem
@@ -335,6 +339,7 @@ export default function Home() {
             description="Developed a physics-driven puzzle game featuring realistic ball dynamics using Pymunk, with color-coded merging mechanics and interactive player controls. Integrated gameplay elements like a scoring system, cooldown mechanics, and responsive visuals. Built with Pygame for rendering and Python for game logic and functionality."
             link="https://github.com/bgar324/suika"
             tags={["Python", "Pygame", "Pymunk"]}
+            onImageClick={handleImageClick}
           />
 
           <ProjectItem
@@ -343,6 +348,7 @@ export default function Home() {
             description="Used OpenWeather's API in order to retrieve live data within the week based on the user's location. Created a simple front end with HTML & CSS, while using JavaScript to fetch the data and display it on the page."
             link="https://beautiful-gumption-a0ca0e.netlify.app/"
             tags={["HTML", "CSS", "JavaScript", "OpenWeather API"]}
+            onImageClick={handleImageClick}
           />
         </div>
 
