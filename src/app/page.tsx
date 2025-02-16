@@ -413,12 +413,12 @@ export default function Home() {
                 href={skill.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col items-center justify-center p-2 rounded-lg transition duration-300"
+                className="group flex flex-col items-center justify-center p-2 rounded-lg transition duration-75"
               >
                 <img
                   src={skill.icon}
                   alt={skill.alt}
-                  className="w-12 h-12 mx-auto transition duration-300 filter invert group-hover:filter-custom-hover"
+                  className="w-12 h-12 mx-auto transition duration-75 filter invert group-hover:filter-custom-hover"
                 />
               </a>
             ))}
