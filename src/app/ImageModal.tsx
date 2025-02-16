@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowRight,
-  faArrowLeft,
-  faCircleXmark,
+  faChevronCircleRight,
+  faChevronCircleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 type ImageModalProps = {
@@ -65,13 +64,13 @@ export default function ImageModal({
               onClick={prevImage}
               className="absolute left-0 top-1/2 transform -translate-y-1/2 text-custom-hover text-base sm:text-lg md:text-xl p-2 ml-4 md:ml-2"
             >
-              <FontAwesomeIcon icon={faArrowLeft} />
+              <FontAwesomeIcon icon={faChevronCircleLeft} />
             </button>
             <button
               onClick={nextImage}
               className="absolute right-0 top-1/2 transform -translate-y-1/2 text-custom-hover text-base sm:text-lg md:text-xl p-2 mr-4 md:mr-2"
             >
-              <FontAwesomeIcon icon={faArrowRight} />
+              <FontAwesomeIcon icon={faChevronCircleRight} />
             </button>
           </>
         )}
