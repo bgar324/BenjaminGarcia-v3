@@ -274,7 +274,7 @@ export default function Home() {
           />
 
           <ProjectItem
-            src="/static/project-previews/logit-preview.png"
+            src="/static/project-previews/logit-preview-min.png"
             title="logit"
             note="(work in progress!)"
             description="A full-stack workout logging app designed for a minimal and efficient tracking experience. Users can log workouts, edit past sessions with a React-calendar, and track progress with Recharts visualizations. Workouts are stored in a PostgreSQL database, with support for tags, comments, and dropsets. Built with Next.js, Tailwind CSS, and Prisma, it streamlines workout management while enabling progressive overload tracking."
@@ -291,11 +291,11 @@ export default function Home() {
               "Prisma",
             ]}
             galleryImages={[
-              "/static/project-previews/logit-preview.png",
-              "/static/project-previews/logit-preview-2.png",
-              "/static/project-previews/logit-preview-3.png",
-              "/static/project-previews/logit-preview-4.png",
-              "/static/project-previews/logit-preview-5.png",
+              "/static/project-previews/logit-preview-min.png",
+              "/static/project-previews/logit-preview-2-min.png",
+              "/static/project-previews/logit-preview-3-min.png",
+              "/static/project-previews/logit-preview-4-min.png",
+              "/static/project-previews/logit-preview-5-min.png",
             ]}
             onImageClick={handleImageClick}
           />
@@ -331,10 +331,10 @@ export default function Home() {
             link="https://mtsaccs.netlify.app/"
             galleryImages={[
               "/static/project-previews/csclubwebsite-preview.png",
-              "/static/project-previews/cs-preview-2.png",
-              "/static/project-previews/cs-preview-3.png",
-              "/static/project-previews/cs-preview-4.png",
-              "/static/project-previews/cs-preview-5.png",
+              "/static/project-previews/cs-preview-2-min.png",
+              "/static/project-previews/cs-preview-3-min.png",
+              "/static/project-previews/cs-preview-4-min.png",
+              "/static/project-previews/cs-preview-5-min.png",
             ]}
             tags={["React.JS", "Bootstrap", "Vite", "Netlify"]}
             onImageClick={handleImageClick}
