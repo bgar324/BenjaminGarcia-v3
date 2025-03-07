@@ -195,7 +195,7 @@ export default function Home() {
             dateRange="SEP 2024 — PRESENT"
             title="Front-End Developer · AdeptEye"
             description="Communicated with clients to understand website needs and preferences. Collaborated with graphic design and video production teams to receive and integrate media assets, ensuring optimal formatting and display across different resolutions. Leveraged HTML, CSS, JavaScript, and React to deliver a seamless user experience with well-implemented animations."
-            link="https://www.walnuths.net/apps/pages/index.jsp?uREC_ID=61709&type=d&pREC_ID=638922"
+            link="https://www.adepteye.com/"
             tags={[
               "SquareSites",
               "Next.JS",
