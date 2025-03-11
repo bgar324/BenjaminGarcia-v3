@@ -1,4 +1,3 @@
-// Home.tsx
 "use client";
 
 import { useState } from "react";
@@ -105,7 +104,6 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Navigation Links */}
         </div>
         <nav className="flex justify-center sticky -top-0.5 z-50 bg-navbar-bg">
           <ul className="flex flex-wrap space-x-4 underline underline-offset-4 mt-4 pb-3 px-5 sm:px-20 lg:px-40 items-center">
@@ -156,7 +154,6 @@ export default function Home() {
           </ul>
         </nav>
 
-        {/* About Section */}
         <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed text-center">
           I'm a{" "}
           <span className="text-custom-hover">Computer Science Student</span>{" "}
