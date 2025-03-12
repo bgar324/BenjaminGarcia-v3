@@ -105,7 +105,7 @@ export default function Home() {
           </div>
 
         </div>
-        <nav className="flex justify-center sticky -top-0.5 z-50 bg-navbar-bg">
+        <nav className="flex justify-center sticky -top-0.5 z-50 bg-navbar-bg -mr-1">
           <ul className="flex flex-wrap space-x-4 underline underline-offset-4 mt-4 pb-3 px-5 sm:px-20 lg:px-40 items-center">
             <li>
               <a
