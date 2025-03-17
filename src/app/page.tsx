@@ -5,6 +5,7 @@ import ExperienceItem from "./ExperienceItem";
 import ProjectItem from "./ProjectItem";
 import Script from "next/script";
 import ContactForm from "./ContactForm";
+import SpecialDivider from "./SpecialDivider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
@@ -259,6 +260,8 @@ export default function Home() {
           />
         </div>
 
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+
         <div id="projects" className="scroll-mt-24 flex flex-col">
           <ProjectItem
             src="/static/project-previews/portfolio-preview.png"
@@ -356,7 +359,8 @@ export default function Home() {
         </div>
 
         {/* skills section */}
-
+        
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         <div
           id="skills"
           className="scroll-mt-52 text-lg border rounded-lg border-white p-6 mt-4 w-10/12 mx-auto"
@@ -420,6 +424,8 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        <hr className="h-px mt-14 -mb-4 bg-gray-200 border-0 dark:bg-gray-700" />
 
         <ContactForm />
       </div>
