@@ -12,3 +12,5 @@ cd BenjaminGarcia-v3
 npm install
 npm run dev
 ```
+
+### man im refactorin this as well
