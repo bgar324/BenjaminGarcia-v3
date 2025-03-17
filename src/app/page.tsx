@@ -166,9 +166,25 @@ export default function Home() {
           through my college's Computer Science Club and client work.
         </p>
 
+        <a
+          href="/static/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm sm:text-base md:text-lg flex items-center justify-center text-white font-semibold mx-auto 
+          mt-1 sm:mt-2 md:mt-3 
+          p-3 
+          rounded-lg shadow-md hover:bg-gray-800 hover:text-custom-hover transition duration-300"
+        >
+          View full Résumé
+          <FontAwesomeIcon
+            icon={faSquareArrowUpRight}
+            className="w-4 h-4 ml-2"
+          />
+        </a>
+        
         <img
           src="/static/ben-min.JPG"
-          className="w-full h-auto rounded-lg mx-auto mt-6"
+          className="w-11/12 h-auto rounded-lg mx-auto mt-6"
         />
 
         <div id="experience" className="scroll-mt-24 flex flex-col">
@@ -242,23 +258,6 @@ export default function Home() {
             tags={["Scratch", "JavaScript", "C#"]}
           />
         </div>
-
-        <a
-          href="/static/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm sm:text-base md:text-lg flex items-center justify-center text-white font-semibold mx-auto 
-          mt-3 sm:mt-4 md:mt-5 
-          mb-12 sm:mb-16 md:mb-20 
-          p-3 
-          rounded-lg shadow-md hover:bg-gray-800 hover:text-custom-hover transition duration-300"
-        >
-          View full Résumé
-          <FontAwesomeIcon
-            icon={faSquareArrowUpRight}
-            className="w-4 h-4 ml-2"
-          />
-        </a>
 
         <div id="projects" className="scroll-mt-24 flex flex-col">
           <ProjectItem
