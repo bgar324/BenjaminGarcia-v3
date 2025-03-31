@@ -5,6 +5,7 @@ import ExperienceItem from "./ExperienceItem";
 import ProjectItem from "./ProjectItem";
 import Script from "next/script";
 import ContactForm from "./ContactForm";
+import SpecialDivider from "./SpecialDivider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
@@ -166,9 +167,25 @@ export default function Home() {
           through my college's Computer Science Club and client work.
         </p>
 
+        <a
+          href="/static/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm sm:text-base md:text-lg flex items-center justify-center text-white font-semibold mx-auto 
+          mt-1 sm:mt-2 md:mt-3 
+          p-3 
+          rounded-lg shadow-md hover:bg-gray-800 hover:text-custom-hover transition duration-300"
+        >
+          View full Résumé
+          <FontAwesomeIcon
+            icon={faSquareArrowUpRight}
+            className="w-4 h-4 ml-2"
+          />
+        </a>
+        
         <img
           src="/static/ben-min.JPG"
-          className="w-full h-auto rounded-lg mx-auto mt-6"
+          className="w-11/12 h-auto rounded-lg mx-auto mt-6"
         />
 
         <div id="experience" className="scroll-mt-24 flex flex-col">
@@ -243,22 +260,7 @@ export default function Home() {
           />
         </div>
 
-        <a
-          href="/static/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm sm:text-base md:text-lg flex items-center justify-center text-white font-semibold mx-auto 
-          mt-3 sm:mt-4 md:mt-5 
-          mb-12 sm:mb-16 md:mb-20 
-          p-3 
-          rounded-lg shadow-md hover:bg-gray-800 hover:text-custom-hover transition duration-300"
-        >
-          View full Résumé
-          <FontAwesomeIcon
-            icon={faSquareArrowUpRight}
-            className="w-4 h-4 ml-2"
-          />
-        </a>
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
         <div id="projects" className="scroll-mt-24 flex flex-col">
           <ProjectItem
@@ -357,7 +359,8 @@ export default function Home() {
         </div>
 
         {/* skills section */}
-
+        
+        <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         <div
           id="skills"
           className="scroll-mt-52 text-lg border rounded-lg border-white p-6 mt-4 w-10/12 mx-auto"
@@ -421,6 +424,8 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        <hr className="h-px mt-14 -mb-4 bg-gray-200 border-0 dark:bg-gray-700" />
 
         <ContactForm />
       </div>
