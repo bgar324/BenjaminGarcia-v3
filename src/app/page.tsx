@@ -104,7 +104,6 @@ export default function Home() {
               />
             </a>
           </div>
-
         </div>
         <nav className="flex justify-center sticky -top-0.5 z-50 bg-navbar-bg -mr-1">
           <ul className="flex flex-wrap space-x-4 underline underline-offset-4 mt-4 pb-3 px-5 sm:px-20 lg:px-40 items-center">
@@ -182,13 +181,25 @@ export default function Home() {
             className="w-4 h-4 ml-2"
           />
         </a>
-        
+
         <img
           src="/static/ben-min.JPG"
           className="w-11/12 h-auto rounded-lg mx-auto mt-6"
         />
 
         <div id="experience" className="scroll-mt-24 flex flex-col">
+          <ExperienceItem
+            incoming={true}
+            dateRange="MAR 2025 — PRESENT"
+            title="Backend SWE Intern · Todd"
+            description="TBA!"
+            link="https://www.toddagriscience.com/"
+            tags={[
+              "Artifical Intelligence",
+              "Machine Learning",
+              "Advanced Data Processing"
+            ]}
+          />
           <ExperienceItem
             dateRange="FEB 2025 — PRESENT"
             title="Software Developer · Reality AI Lab"
@@ -359,7 +370,7 @@ export default function Home() {
         </div>
 
         {/* skills section */}
-        
+
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         <div
           id="skills"

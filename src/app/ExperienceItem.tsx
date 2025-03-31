@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareArrowUpRight } from "@fortawesome/free-solid-svg-icons";
 
 type ExperienceItemProps = {
+  incoming?: boolean;
   dateRange: string;
   title: string;
   description: string;
@@ -11,6 +12,7 @@ type ExperienceItemProps = {
 };
 
 export default function ExperienceItem({
+  incoming,
   dateRange,
   title,
   description,
@@ -36,6 +38,11 @@ export default function ExperienceItem({
               className="block"
             >
               {title}
+              {incoming && (
+                <span className="text-custom-hover ml-1">
+                  (incoming!){" "}
+                </span>
+              )}
               <FontAwesomeIcon
                 icon={faSquareArrowUpRight}
                 className="w-4 h-4 ml-2"
