@@ -159,9 +159,10 @@ export default function Home() {
           <span className="text-custom-hover">Computer Science Student</span>{" "}
           and <span className="text-custom-hover">Web Developer</span> based in
           the greater Los Angeles area. Currently working as a{" "}
-          <span className="text-custom-hover">Software Developer</span> at{" "}
-          <span className="text-custom-hover">Reality AI Lab</span>, with
-          experience in{" "}
+          <span className="text-custom-hover">
+            Backend Software Development Intern
+          </span>{" "}
+          at <span className="text-custom-hover">Todd</span>, with experience in{" "}
           <span className="text-custom-hover">front-end development </span>
           through my college's Computer Science Club and client work.
         </p>
@@ -189,19 +190,25 @@ export default function Home() {
 
         <div id="experience" className="scroll-mt-24 flex flex-col">
           <ExperienceItem
-            incoming={true}
-            dateRange="MAR 2025 — PRESENT"
-            title="Backend SWE Intern · Todd"
-            description="TBA!"
+            dateRange="APR — PRESENT"
+            title="Backend Software Development Intern · Todd"
+            description="Developing backend solutions that leverage AI and machine learning to automate large-scale agricultural data analysis and optimization."
             link="https://www.toddagriscience.com/"
             tags={[
               "Artifical Intelligence",
               "Machine Learning",
-              "Advanced Data Processing"
+              "Advanced Data Processing",
             ]}
           />
           <ExperienceItem
-            dateRange="FEB 2025 — PRESENT"
+            dateRange="APR — PRESENT"
+            title="Front-End Developer · Caduceus Club"
+            description="Collaborated with the Caduceus Club to design and launch a mobile-first feedback site for the 15th Annual Health Professions Conference, focusing on accessibility, responsiveness, and ease of use for attendees."
+            link="https://github.com/bgar324/caduceus-club-website"
+            tags={["Mobile First Development", "Responsiveness"]}
+          />
+          <ExperienceItem
+            dateRange="FEB — APR 2025"
             title="Software Developer · Reality AI Lab"
             description="Currently contributing to the development and refinement of the full-stack architecture for Marvel AI (AI Teaching Assistant) and Sky AI (AI Career Coach). Built and optimized the frontend with ReactJS and developed backend services using Node.js, Python, and RESTful APIs.Managed data and real-time workflows with Firestore DB, Firebase Realtime DB, and Redis."
             link="https://www.realityai.tech/open-source/careers"
@@ -217,7 +224,7 @@ export default function Home() {
           />
 
           <ExperienceItem
-            dateRange="SEP 2024 — PRESENT"
+            dateRange="SEP 2024 — APR 2025"
             title="Front-End Developer · AdeptEye"
             description="Communicated with clients to understand website needs and preferences. Collaborated with graphic design and video production teams to receive and integrate media assets, ensuring optimal formatting and display across different resolutions. Leveraged HTML, CSS, JavaScript, and React to deliver a seamless user experience with well-implemented animations."
             link="https://www.adepteye.com/"
@@ -239,7 +246,7 @@ export default function Home() {
           />
 
           <ExperienceItem
-            dateRange="MAR 2024 — FEB 2025"
+            dateRange="MAR 2024 — APR 2025"
             title="AI Engineer · Outlier AI"
             description="Reviewed and evaluated AI-generated responses to ensure compliance with specified guidelines and optimized engineering processes to improve response quality and efficiency. Adjusted settings and refined prompts to optimize response quality and alignment with desired parameters. Reviewed the validity of prompts through a rejection and approval process, ensuring alignment with client requirements and company guidelines."
             link="https://outlier.ai/"
@@ -247,7 +254,7 @@ export default function Home() {
           />
 
           <ExperienceItem
-            dateRange="APR 2024 — MAY 2024"
+            dateRange="APR — MAY 2024"
             title="Database Analyst Extern · Mobalytics"
             description="Analyzed SQL data tables presented by the team at Mobalytics. Then presenting a player base analysis based off of said analytics and data tables in order to further pursue business ventures."
             link="https://mobalytics.gg/"
@@ -255,7 +262,7 @@ export default function Home() {
           />
 
           <ExperienceItem
-            dateRange="FEB 2024 — MAR 2024"
+            dateRange="FEB — MAR 2024"
             title="AI Powered VC Analyst · igniteXL Ventures"
             description="Utilized startup databases such as Crunchbase, Pitchbook, Tracxn, and Wellfound/AngelList to identify promising startups in the Health, Beauty, and Wellness sectors. Conducted in-depth research using generative AI tools like ChatGPT (3.5 & 4), Google PaLM, Perplexity, and Bing AI to gather valuable insights.  a comprehensive three-page investment thesis outlining investment rationale, potential risks with mitigation strategies, business models, and key metrics such as growth and consumer profiles."
             link="https://ignitexl.vc/"
@@ -263,7 +270,7 @@ export default function Home() {
           />
 
           <ExperienceItem
-            dateRange="JAN 2024 — APR 2024"
+            dateRange="JAN — APR 2024"
             title="Software Programming Instructor · Code Ninjas"
             description="Worked closely with children, including those with disabilities, to provide guidance in coding and debugging. Instructed individuals aged 5 to 14 in Scratch, JavaScript, and C# using Microsoft's MakeCode Platform, fostering proficiency and problem-solving skills."
             link="https://www.codeninjas.com/"
@@ -279,6 +286,16 @@ export default function Home() {
             title="Benjamin Garcia"
             description="Third iteration of my portfolio website, built strictly with Next.JS & TailwindCSS. With a strong focus on performance and accessibility, this website is designed to be as lightweight as possible while still providing a visually appealing experience."
             link="https://github.com/bgar324/BenjaminGarcia-v3"
+            tags={["Next.JS", "TypeScript", "TailwindCSS", "Vercel"]}
+            onImageClick={handleImageClick}
+          />
+
+          <ProjectItem
+            src="/static/project-previews/caduceus.png"
+            title="15th Annual Health Professions Conference"
+            note="(v1)"
+            description="Developed a mobile-first website for Mt. SAC's 15th Annual Health Professions Conference. Designed to help attendees quickly access and submit feedback forms for each session."
+            link="https://github.com/bgar324/caduceus-club-website"
             tags={["Next.JS", "TypeScript", "TailwindCSS", "Vercel"]}
             onImageClick={handleImageClick}
           />
