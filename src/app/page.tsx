@@ -208,6 +208,13 @@ export default function Home() {
             tags={["Mobile First Development", "Responsiveness"]}
           />
           <ExperienceItem
+            dateRange="SEP 2024 — PRESENT"
+            title="Front-End Developer · Mt. SAC CS Club"
+            description="Spearheaded the redesign and overhaul of the Mt. SAC Computer Science Club website for a 900+ member organization, transitioning to React.JS for modularity and Bootstrap for responsiveness and improved functionality. Developed and implemented features to enhance user experience and accessibility, including up-to-date contact information, officer and advisor profiles, upcoming and past events."
+            link="https://mtsaccs.netlify.app/"
+            tags={["React.JS", "Bootstrap", "Vite", "Netlify"]}
+          />
+          <ExperienceItem
             dateRange="FEB — APR 2025"
             title="Software Developer · Reality AI Lab"
             description="Currently contributing to the development and refinement of the full-stack architecture for Marvel AI (AI Teaching Assistant) and Sky AI (AI Career Coach). Built and optimized the frontend with ReactJS and developed backend services using Node.js, Python, and RESTful APIs.Managed data and real-time workflows with Firestore DB, Firebase Realtime DB, and Redis."
@@ -235,14 +242,6 @@ export default function Home() {
               "React.JS",
               "Bootstrap",
             ]}
-          />
-
-          <ExperienceItem
-            dateRange="SEP 2024 — PRESENT"
-            title="Front-End Developer · Mt. SAC CS Club"
-            description="Spearheaded the redesign and overhaul of the Mt. SAC Computer Science Club website for a 900+ member organization, transitioning to React.JS for modularity and Bootstrap for responsiveness and improved functionality. Developed and implemented features to enhance user experience and accessibility, including up-to-date contact information, officer and advisor profiles, upcoming and past events."
-            link="https://mtsaccs.netlify.app/"
-            tags={["React.JS", "Bootstrap", "Vite", "Netlify"]}
           />
 
           <ExperienceItem
